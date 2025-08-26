@@ -19,6 +19,8 @@ alias v nvim
 alias hex 'xxd -u -g 1'
 alias ip 'ip -c'
 
+alias fff "source ~/.config/fish/config.fish"
+
 set -q GHCUP_INSTALL_BASE_PREFIX[1]; or set GHCUP_INSTALL_BASE_PREFIX $HOME ; set -gx PATH $HOME/.cabal/bin $PATH /home/yarn/.ghcup/bin # ghcup-env
 
 export COLORTERM=truecolor
