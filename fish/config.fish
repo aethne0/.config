@@ -20,11 +20,11 @@ alias hex 'xxd -u -g 1'
 alias ip 'ip -c'
 
 alias fff "source ~/.config/fish/config.fish"
+alias fft "tmux source-file ~/.config/tmux/tmux.conf"
 
-set -q GHCUP_INSTALL_BASE_PREFIX[1]; or set GHCUP_INSTALL_BASE_PREFIX $HOME ; set -gx PATH $HOME/.cabal/bin $PATH /home/yarn/.ghcup/bin # ghcup-env
+fish_vi_key_bindings
 
 export COLORTERM=truecolor
-
 
 # autocompletions
 
@@ -33,4 +33,3 @@ function __docker_image_names
     docker images --format "{{.Repository}}:{{.Tag}}" 2>/dev/null
 end
 complete -c docker -n '__fish_seen_subcommand_from rmi' -a '(__docker_image_names)'
-
